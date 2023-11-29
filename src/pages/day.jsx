@@ -89,32 +89,32 @@ const Day = () => {
   if (!dailyData) return <div>Loading...</div>;
 
   return (
-    <div className="container relative">
+    <div className="container relative font-serif bg-black text-white">
       <div className="absolute top-0 left-0 p-8">
-        <Link to="/" className="btn-style">
+        <Link to="/" className="btn-style border-blue-400 border-2">
           Back
         </Link>
       </div>
 
-      <h1 className="text-center text-2xl font-semibold">
+      <h1 className="text-center text-2xl font-semibold text-blue-400">
         Day {dailyData.day} - {dailyData.title}
       </h1>
       <div className="mt-12">
         <div>{dailyData.sentences[currentPage].english}</div>
         <button
-          className={`${!isVisible && "bg-black"}`}
+          className={`btn-style ${!isVisible && "bg-black"} border-x-blue-400 border-2 mt-4`}
           onClick={() => setIsVisible(!isVisible)}
         >
-          {dailyData.sentences[currentPage].korean}
+          {isVisible ? dailyData.sentences[currentPage].korean : "Click to reveal"}
         </button>
         <div className="mt-4">
-          <button className="btn-style" onClick={onClickPrev}>
+          <button className="btn-style border-blue-400 border-2" onClick={onClickPrev}>
             Prev
           </button>
-          <button className="btn-style ml-2" onClick={onClickNext}>
+          <button className="btn-style border-blue-400 border-2 ml-2" onClick={onClickNext}>
             Next
           </button>
-          <button className="btn-style ml-2" onClick={onClickSound}>
+          <button className="btn-style border-blue-400 border-2 ml-2" onClick={onClickSound}>
             Sound
           </button>
         </div>
