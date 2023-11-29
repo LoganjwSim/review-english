@@ -5,7 +5,7 @@ console.log(englishData);
 
 const Main = () => {
   return (
-    <div className="bg-black min-h-screen max-w-screen-md mx-auto px-8 pt-20">
+    <div className="bg-black container">
       <h1 className="text-center text-4xl font-bold text-gray-300 mb-8 font-serif">
         Study English
       </h1>
